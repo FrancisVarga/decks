@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Processus 1.5</title>
+
+    <meta name="author" content="Francis Varga">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="stylesheet" href="core/deck.core.css">
+    <!-- Core and extension CSS files -->
+    <link rel="stylesheet" href="extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="extensions/status/deck.status.css">
+    <link rel="stylesheet" href="extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" href="themes/style/neon.css">
+
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+
+    <!-- Stylesheet for Codemirror -->
+    <link rel="stylesheet" href="extensions/codemirror/deck.codemirror.css">
+    <link rel="stylesheet" href="extensions/codemirror/themes/elegant.css">
+
+    <script src="modernizr.custom.js"></script>
+
+</head>
+<body class="deck-container">
+
+<!-- Begin slides -->
+<section class="slide" id="title">
+    <h1>Processus 1.5</h1>
+</section>
+
+<section class="slide" id="index">
+    <h2>Index</h2>
+
+    <h3>Important</h3>
+    <ul>
+        <li>
+            <h4>MemcachedFactory</h4>
+        </li>
+        <li>
+            <h4>Modified Mvo</h4>
+        </li>
+        <li>
+            <h4>Multiple Auth</h4>
+        </li>
+        <li>
+            <h4>CouchDB Connector</h4>
+        </li>
+        <li>
+            <h4>CouchDB Logging</h4>
+        </li>
+        <li>
+            <h4>Hermes Client</h4>
+        </li>
+        <li>
+            <h4>Processus Config via. Couchabse</h4>
+        </li>
+        <li>
+            <h4>CookieMonster</h4>
+        </li>
+    </ul>
+    <h3>Nice to know</h3>
+    <ul>
+        <li>
+            <h4>AWS-Stack</h4>
+        </li>
+        <li>
+            <h4>New Deployment Strategy</h4>
+        </li>
+        <li>
+            <h4>Facebook Data handling Strategy</h4>
+        </li>
+        <li>
+            <h4>CMS / CRM Processus</h4>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="memcachedFactory">
+    <h2>MemcachedFactory -> Json/Binary</h2>
+    <br/>
+
+    <h3>Why?</h3>
+    <ul>
+        <li>
+            <p>save connections</p>
+        </li>
+        <li>
+            <p>normal way to connect with databases like ZendDBFactory</p>
+        </li>
+    </ul>
+
+        <div>
+            <textarea type="php" class="code" mode="php" style="display: none;">
+<?php
+$this->_memcachedClient = \Processus\Lib\Server\ServerFactory::memcachedFactory(
+    $this->getMembaseHost(), $this->getDataBucketPort(),
+    \Processus\Consta\MemcachedFactoryType::MEMCACHED_JSON
+);
+?></textarea>
+        </div>
+        <br/>
+        <div>
+            <textarea type="php" class="code" mode="php" style="display: none;">
+<?php
+$this->_memcachedClient = \Processus\Lib\Server\ServerFactory::memcachedFactory(
+    $this->getMembaseHost(), $this->getDataBucketPort(),
+    \Processus\Consta\MemcachedFactoryType::MEMCACHED_BINARY
+);
+?></textarea>
+        </div>
+</section>
+
+<section class="slide" id="modifiedMvo">
+    <h2>Modified Mvo</h2>
+    <ul>
+        <li>
+            <p>Stores data now in JSON per <u><strong>default</strong></u></p>
+        </li>
+        <li>
+            <p>Creating Views</p>
+        </li>
+        <li>
+            <p>see the raw json data</p>
+        </li>
+        <li>
+            <p>Hotfix on Couchbase DP4 directly on the live system</p>
+        </li>
+        <li>
+            <p>Always -> because i can</p>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="multipleAuth">
+    <h2>Multiple Auth</h2>
+    <ul>
+        <li>
+            <p>Stores data now in JSON in General</p>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="multipleAuth-example">
+    <h2>Multiple Auth</h2>
+    <ul>
+        <li>
+            <p>Stores data now in JSON in General</p>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="multipleAuth-example1">
+    <h2>Multiple Auth</h2>
+    <ul>
+        <li>
+            <p>Stores data now in JSON in General</p>
+        </li>
+    </ul>
+</section>
+
+<section class="slide" id="couchDBConnector">
+    <h2>CouchDB Connector</h2>
+    <ul>
+        <li>
+            <p>Stores data now in JSON in General</p>
+        </li>
+    </ul>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+</section>
+
+<section class="slide" id="couchDBLogging">
+    <h2>CouchDB Logging</h2>
+    <ul>
+        <li>
+            <p>Stores data now in JSON in General</p>
+        </li>
+    </ul>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+</section>
+
+<section class="slide" id="hermesClient">
+    <h2>Hermes Client</h2>
+    <ul>
+        <li class="slide" id="hermesClient-general">
+            <p></p>
+        </li>
+        <li class="slide" id="hermesClient-api">
+            <p></p>
+        </li>
+        <li class="slide" id="hermesClient-future">
+            <p></p>
+        </li>
+    </ul>
+    <pre>
+        <code>
+
+        </code>
+    </pre>
+</section>
+
+<section class="slide" id="processusConfigViaCouchabse">
+    <h2>Processus Config via. Couchabse</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="cookieMonster">
+    <h2>CookieMonster</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="niiiicceee">
+    <h1>Nice to know!!!</h1>
+</section>
+
+<section class="slide" id="newDeploymentStrategy-fails">
+    <h2>New Deployment Strategy - Fails</h2>
+
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="newDeploymentStrategy-learnings">
+    <h2>New Deployment Strategy - Learnings</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="newDeploymentStrategy-future">
+    <h2>New Deployment Strategy - Future</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="facebookDataHandlingStrategy">
+    <h2>Facebook Data Handling</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="cMSCRMProcessus-goal">
+    <h2>CMS / CRM Processus - Goal</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="cMSCRMProcessus-how">
+    <h2>CMS / CRM Processus - How</h2>
+    <h3>Why?</h3>
+    <ul>
+
+    </ul>
+</section>
+
+<section class="slide" id="AWS-Stack">
+    <h1>AWS - Stack</h1>
+</section>
+
+<section class="slide" id="AWS-Stack-Cloudformation">
+    <h2>AWS - Stack - Cloudformation</h2>
+</section>
+
+<section class="slide" id="AWS-Stack-AutScaling">
+    <h2>AWS - Stack - AutoScaling</h2>
+</section>
+
+<section class="slide" id="AWS-Stack-Route53">
+    <h2>AWS - Stack - Route53</h2>
+</section>
+
+<section class="slide" id="qa">
+    <h1>
+        Q&A
+        <p>Question & Answer</p>
+    </h1>
+</section>
+
+<section class="slide" id="created-with-deckjs">
+    <h1>
+        Created with deck.js
+        <p>THX!</p>
+    </h1>
+</section>
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+    <span class="deck-status-current"></span>
+    /
+    <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocul relative URL; fall back to local if offline -->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+<!-- Syntax highlighting Modes -->
+
+<!-- javascript -->
+<script src="extensions/codemirror/codemirror.js"></script>
+
+<!-- html mode (note html mode requires xml, css and javascript) -->
+<script src="extensions/codemirror/mode/php/php.js"></script>
+<script src="extensions/codemirror/mode/javascript/javascript.js"></script>
+<script src="extensions/codemirror/mode/xml/xml.js"></script>
+<script src="extensions/codemirror/mode/css/css.js"></script>
+<script src="extensions/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+<!-- Plugin code -->
+<script src="extensions/codemirror/deck.codemirror.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+    $(function () {
+        $.deck('.slide');
+    });
+</script>
+
+
+</body>
+</html>
